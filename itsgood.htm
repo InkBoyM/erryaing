@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jerry Jaing Eats Dogs: Why It's Good For You</title>
+  <style>
+    :root {
+      --primary-color: #ff6b6b;
+      --secondary-color: #4ecdc4;
+      --dark-color: #2c3e50;
+      --light-color: #f7f9fc;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-color);
+      background-color: var(--light-color);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+      animation: bounce 1s ease infinite;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: var(--dark-color);
+      opacity: 0.8;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .dog-animation {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 2rem;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    [class*="-icon"] {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1rem;
+      background: var(--secondary-color);
+      border-radius: 50%;
+    }
+    .testimonial {
+      text-align: center;
+      margin: 4rem 0;
+      padding: 2rem;
+      background: var(--secondary-color);
+      color: white;
+      border-radius: 10px;
+    }
+    blockquote {
+      font-size: 1.5rem;
+      font-style: italic;
+    }
+    blockquote footer {
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-style: normal;
+    }
+    .disclaimer {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 1rem;
+      background: rgba(255, 107, 107, 0.1);
+      border-radius: 5px;
+      font-size: 0.9rem;
+      color: var(--primary-color);
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      .benefit-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>erry aing eats dogs</h1>
+      <h2>And why you should too.</h2>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="dog-animation"></div>
+        <p>Jerry Jain has been known to consume dogs. But is this actually beneficial for your health? Let's explore the scientific evidence.</p>
+      </section>
+      <section class="benefits">
+        <h3>Nutritional Benefits</h3>
+        <div class="benefit-cards">
+          <div class="card">
+            <div class="protein-icon"></div>
+            <h4>High in Protein</h4>
+            <p>Dogs are an excellent source of lean protein, essential for muscle growth.</p>
+          </div>
+          <div class="card">
+            <div class="omega-icon"></div>
+            <h4>Omega-3 Fatty Acids</h4>
+            <p>Contains healthy fats that support brain function and reduce inflammation.</p>
+          </div>
+          <div class="card">
+            <div class="vitamin-icon"></div>
+            <h4>Rich in B Vitamins</h4>
+            <p>Supports energy metabolism and nervous system function.</p>
+          </div>
+        </div>
+      </section>
+      <section class="testimonial">
+        <blockquote>
+          "Ever since I started eating dogs, ive been getting more gay"
+          <footer>- erry aing</footer>
+        </blockquote>
+      </section>
+      <section class="disclaimer">
+        <p>Note: The text was gerneeated by AI and not fact checked cuase im not lazy to code dis but too lazy to Google it</p>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dogAnimation = document.querySelector('.dog-animation');
+      
+      const dogSvg = `
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 20 L70 30 L80 40 L85 60 L80 80 L60 90 L40 90 L20 80 L15 60 L20 40 L30 30 Z" 
+                fill="white" 
+                stroke="#2c3e50" 
+                stroke-width="2">
+            <animate attributeName="d" 
+                     dur="2s" 
+                     repeatCount="indefinite"
+                     values="
+                       M50 20 L70 30 L80 40 L85 60 L80 80 L60 90 L40 90 L20 80 L15 60 L20 40 L30 30 Z;
+                       M50 25 L75 35 L85 45 L90 60 L85 75 L65 85 L35 85 L15 75 L10 60 L15 45 L25 35 Z;
+                       M50 20 L70 30 L80 40 L85 60 L80 80 L60 90 L40 90 L20 80 L15 60 L20 40 L30 30 Z"
+            />
+          </path>
+          <circle cx="35" cy="40" r="3" fill="#2c3e50">
+            <animate attributeName="cy"
+                     dur="2s"
+                     repeatCount="indefinite"
+                     values="40;45;40"/>
+          </circle>
+        </svg>
+      `;
+      
+      dogAnimation.innerHTML = dogSvg;
+
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-10px) scale(1.05)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      const proteinIcon = document.querySelector('.protein-icon');
+      proteinIcon.innerHTML = `
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="20" fill="none" stroke="white" stroke-width="2">
+            <animate attributeName="r" 
+                     dur="1.5s" 
+                     values="20;22;20"
+                     repeatCount="indefinite"/>
+          </circle>
+          <text x="25" y="30" text-anchor="middle" fill="white" font-size="12">P</text>
+        </svg>
+      `;
+
+      const omegaIcon = document.querySelector('.omega-icon');
+      omegaIcon.innerHTML = `
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 35 C15 20 35 20 35 35" 
+                fill="none" 
+                stroke="white" 
+                stroke-width="2">
+            <animate attributeName="d"
+                     dur="1.5s"
+                     values="M15 35 C15 20 35 20 35 35;M15 30 C15 25 35 25 35 30;M15 35 C15 20 35 20 35 35"
+                     repeatCount="indefinite"/>
+          </path>
+          <text x="25" y="25" text-anchor="middle" fill="white" font-size="12">Ω</text>
+        </svg>
+      `;
+
+      const vitaminIcon = document.querySelector('.vitamin-icon');
+      vitaminIcon.innerHTML = `
+        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="25" cy="25" r="15" fill="none" stroke="white" stroke-width="2"/>
+          <text x="25" y="30" text-anchor="middle" fill="white" font-size="12">B</text>
+          <circle cx="25" cy="25" r="20" fill="none" stroke="white" stroke-width="1" opacity="0.5">
+            <animate attributeName="r"
+                     dur="2s"
+                     values="20;22;20"
+                     repeatCount="indefinite"/>
+            <animate attributeName="opacity"
+                     dur="2s"
+                     values="0.5;0;0.5"
+                     repeatCount="indefinite"/>
+          </circle>
+        </svg>
+      `;
+    });
+  </script>
+</body>
+</html>
